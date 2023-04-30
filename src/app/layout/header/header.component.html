@@ -3,4 +3,16 @@
     <mat-icon>menu</mat-icon>
   </button>
   <span>Header</span>
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="toggleTheme()">
+    <mat-icon>{{ isLightTheme ? 'brightness_3' : 'brightness_7' }}</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-toolbar color="primary">
+  <span>My Dashboard</span>
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="toggleTheme()">
+    <mat-icon>{{ isLightTheme ? 'brightness_3' : 'brightness_7' }}</mat-icon>
+  </button>
 </mat-toolbar>
