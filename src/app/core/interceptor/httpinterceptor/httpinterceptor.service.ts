@@ -16,10 +16,7 @@ import { Observable, tap, throwError } from 'rxjs';
 export class HttpinterceptorService {
   constructor(private snackBar: MatSnackBar) {}
 
-  intercept(
-    req: HttpRequest<any>,
-    next: HttpHandler
-  ): Observable<HttpEvent<any>> {
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       Authorization: 'Bearer ' + localStorage.getItem('token'),
