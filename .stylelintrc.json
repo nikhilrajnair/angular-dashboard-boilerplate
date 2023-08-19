@@ -1,5 +1,18 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "plugins": [
+    "stylelint-order"
+  ],
   "rules": {
+    "indentation": null,
+    "order/properties-alphabetical-order": true,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "host"
+        ]
+      }
+    ]
   }
 }
