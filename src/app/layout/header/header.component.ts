@@ -4,10 +4,9 @@ import { ThemeService } from 'src/app/core/services/theme/theme.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-
   @Output() toggleSidebar: EventEmitter<void> = new EventEmitter<void>();
 
   isLightTheme!: boolean;
@@ -26,5 +25,4 @@ export class HeaderComponent {
     this.isLightTheme = !this.isLightTheme;
     this.themeService.setTheme(this.isLightTheme);
   }
-
 }
