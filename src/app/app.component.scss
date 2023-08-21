@@ -1,29 +1,26 @@
 .main-container {
+  inset: 60px 0;
   position: absolute;
-  top: 60px;
-  bottom: 60px;
-  left: 0;
-  right: 0;
 }
 
 .sidenav {
-  display: flex;
   align-items: center;
+  background: #fefefe;
+  display: flex;
   justify-content: center;
   width: 200px;
-  background: #fefefe;
 }
 
 .header {
-  position: fixed;
-  top: 0;
   left: 0;
+  position: fixed;
   right: 0;
+  top: 0;
 }
 
 .footer {
-  position: fixed;
   bottom: 0;
   left: 0;
+  position: fixed;
   right: 0;
 }
