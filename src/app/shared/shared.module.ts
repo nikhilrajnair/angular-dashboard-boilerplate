@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [],
@@ -28,6 +30,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSidenavModule,
     MatListModule,
     MatSnackBarModule,
+    MatCardModule,
+    MatTableModule
   ],
   exports: [
     CommonModule,
@@ -42,6 +46,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSidenavModule,
     MatListModule,
     MatSnackBarModule,
+    MatCardModule,
+    MatTableModule
   ],
 })
 export class SharedModule {}

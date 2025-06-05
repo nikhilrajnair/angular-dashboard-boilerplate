@@ -1,1 +1,59 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <div class="dashboard-cards">
+    <mat-card class="dashboard-card">
+      <mat-card-title>Users</mat-card-title>
+      <mat-card-content>
+        <h2>1,234</h2>
+        <p>Active Users</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="dashboard-card">
+      <mat-card-title>Revenue</mat-card-title>
+      <mat-card-content>
+        <h2>$12,345</h2>
+        <p>This Month</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="dashboard-card">
+      <mat-card-title>Orders</mat-card-title>
+      <mat-card-content>
+        <h2>567</h2>
+        <p>Pending Orders</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="dashboard-content">
+    <mat-card class="dashboard-table-card">
+      <mat-card-title>Recent Transactions</mat-card-title>
+      <mat-card-content>
+        <table mat-table [dataSource]="fakeData" class="mat-elevation-z1">
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>Date</th>
+            <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+          </ng-container>
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          </ng-container>
+          <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>Amount</th>
+            <td mat-cell *matCellDef="let element">{{ element.amount }}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="dashboard-chart-card">
+      <mat-card-title>Sales Overview</mat-card-title>
+      <mat-card-content>
+        <!-- Chart placeholder, replace with ngx-charts, Chart.js, etc. -->
+        <div class="chart-placeholder">
+          <span>Chart goes here</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
