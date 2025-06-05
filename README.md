@@ -51,46 +51,56 @@
 
 Here's a brief explanation of each folder and file:
 
-    app/core: This folder contains the core functionality of your app, such as HTTP interceptors and services.
+    app/core: This folder contains the core functionality of the app, such as HTTP interceptors and services.
 
-    app/layout: This folder contains the header, footer, and sidebar components that make up your app's layout.
+    app/layout: This folder contains the header, footer, and sidebar components that make up the app's layout.
 
-    app/shared: This folder contains shared components and pipes that can be used throughout your app.
+    app/shared: This folder contains shared components and pipes that can be used throughout the app.
 
     app/modules: This folder contains lazy-loaded feature modules. Each module has its own folder with a routing module and a component file.
 
-    app-routing.module.ts: This file defines the routes for your app.
+    app-routing.module.ts: This file defines the routes for the app.
 
-    app.component.ts: This file defines the root component for your app.
+    app.component.ts: This file defines the root component for the app.
 
     app.component.html: This file defines the template for the root component.
 
     app.component.scss: This file defines the styles for the root component.
 
-    app.module.ts: This file defines the main module for your app.
+    app.module.ts: This file defines the main module for the app.
 
-    assets/images: This folder contains images used in your app.
+    assets/images: This folder contains images used in the app.
 
-    assets/styles: This folder contains the SCSS files for your app's styles.
+    assets/styles: This folder contains the SCSS files for the app's styles.
 
     environments: This folder contains environment-specific configuration files.
     
-    index.html: This file is the entry point for your app.
+    index.html: This file is the entry point for the app.
 
-    main.ts: This file bootstraps your app.
+    main.ts: This file bootstraps the app.
 
     polyfills.ts: This file is required to support older browsers.
 
-    styles.scss: This file imports the global styles for your app.
+    styles.scss: This file imports the global styles for the app.
 
-    tsconfig.app.json: This file is the TypeScript configuration for your app.
+    tsconfig.app.json: This file is the TypeScript configuration for the app.
 
-    tsconfig.json: This file is the global TypeScript configuration for your app.
+    tsconfig.json: This file is the global TypeScript configuration for the app.
 
-    tsconfig.spec.json: This file is the TypeScript configuration for your app's tests.
+    tsconfig.spec.json: This file is the TypeScript configuration for the app's tests.
     
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+
+### Development
+
+To run linters and formatters, use the following commands:
+
+-   `npm run lint`: Lints the TypeScript code.
+-   `npm run lint:fix`: Automatically fixes linting issues in the TypeScript code.
+-   `npm run stylelint`: Lints the SCSS styles.
+-   `npm run stylelint:fix`: Automatically fixes stylelint issues in the SCSS styles.
+-   `npm run format`: Formats the TypeScript, SCSS, and HTML code using Prettier.
 
 ## Development server
 

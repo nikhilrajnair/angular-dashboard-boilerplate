@@ -4,7 +4,6 @@
     "stylelint-order"
   ],
   "rules": {
-    "indentation": null,
     "order/properties-alphabetical-order": true,
     "selector-pseudo-class-no-unknown": [
       true,
