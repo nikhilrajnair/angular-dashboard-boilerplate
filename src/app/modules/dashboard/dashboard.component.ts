@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ChartConfiguration, ChartType } from 'chart.js';
 
 @Component({
   selector: 'app-dashboard',
