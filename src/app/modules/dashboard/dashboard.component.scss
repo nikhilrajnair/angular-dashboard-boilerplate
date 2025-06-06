@@ -34,52 +34,37 @@
   box-shadow: 0 4px 24px 0 rgba(124, 58, 237, 0.16);
 }
 
+.dashboard-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+mat-card {
+  flex: 1 1 300px;
+  min-width: 300px;
+  // max-width: 400px;
+}
+
 .dashboard-content {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
 }
 
-.dashboard-table-card,
-.dashboard-chart-card {
+.dashboard-table-card {
   flex: 1 1 400px;
   min-width: 350px;
   background: linear-gradient(120deg, #f0f9ff 0%, #f3e8ff 100%);
   box-shadow: 0 2px 12px 0 rgba(16, 185, 129, 0.08);
   border-radius: 12px;
-}
-
-.dashboard-table-card {
   border-top: 4px solid #3b82f6;
-}
-
-.dashboard-chart-card {
-  border-top: 4px solid #f472b6;
-}
-
-.chart-placeholder {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(236, 72, 153, 0.08);
-  border-radius: 8px;
-  color: #a21caf;
-  font-weight: 500;
-  font-size: 1.1rem;
 }
 
 mat-card-title {
   font-weight: 700;
-  color: #7c3aed;
   letter-spacing: 0.5px;
   padding-left: 16px;
   padding-top: 16px;
 }
-
-table {
-  background: rgba(59, 130, 246, 0.03);
-  border-radius: 8px;
-  overflow: hidden;
-}
-

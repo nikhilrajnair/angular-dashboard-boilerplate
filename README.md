@@ -125,3 +125,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+6. Sample Roadmap
+Refactor folder structure (core, shared, modules)
+Implement sidebar navigation with active route highlighting
+(Use routerLinkActive="active" in sidebar links)
+Dashboard: Add charts, cards, tables (ng2-charts, Material Table)
+User Module: Fetch/display users from RandomUser API
+Weather Module: Fetch/display weather for a city
+Crypto Module (optional): Show live crypto prices
+Theme toggle: Light/dark mode
+Testing: Add unit tests for components/services
+README: Add setup, features, screenshots, and API links

@@ -1,3 +1,4 @@
+/* filepath: /Users/nikhilraj/Desktop/personal/angular-dashboard-boilerplate/src/app/modules/user/user.component.scss */
 .user-container {
   display: flex;
   gap: 32px;
@@ -59,22 +60,6 @@
   border-radius: 8px;
   font-size: 0.9em;
   margin-left: 8px;
-}
-
-.status-active {
-  color: #10b981;
-  font-weight: 600;
-}
-
-.status-inactive {
-  color: #f59e42;
-  font-weight: 600;
-}
-
-table {
-  background: rgba(59, 130, 246, 0.03);
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 mat-card-title {

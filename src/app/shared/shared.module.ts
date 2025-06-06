@@ -12,8 +12,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {MatCardModule} from '@angular/material/card';
-import {MatTableModule} from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [],
@@ -22,7 +24,6 @@ import {MatTableModule} from '@angular/material/table';
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
-
     // Angular Material modules
     MatButtonModule,
     MatIconModule,
@@ -31,14 +32,15 @@ import {MatTableModule} from '@angular/material/table';
     MatListModule,
     MatSnackBarModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginator,
+    MatProgressBarModule,
   ],
   exports: [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
-
     // Angular Material modules
     MatButtonModule,
     MatIconModule,
@@ -47,7 +49,9 @@ import {MatTableModule} from '@angular/material/table';
     MatListModule,
     MatSnackBarModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginator,
+    MatProgressBarModule,
   ],
 })
 export class SharedModule {}

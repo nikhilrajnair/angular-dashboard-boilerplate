@@ -1,37 +1,47 @@
 <div class="user-container">
   <mat-card class="user-list-card">
-    <mat-card-title>Users</mat-card-title>
+    <mat-card-title>
+      Users
+      <!-- <mat-form-field appearance="outline" class="search-field">
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="search" (ngModelChange)="onSearch()" placeholder="Name or Email" />
+        <button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="search = ''; onSearch()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field> -->
+    </mat-card-title>
     <mat-card-content>
       <table mat-table [dataSource]="users" class="mat-elevation-z1">
         <ng-container matColumnDef="avatar">
           <th mat-header-cell *matHeaderCellDef></th>
           <td mat-cell *matCellDef="let user">
-            <img [src]="user.avatar" alt="avatar" class="avatar" />
+            <img [src]="user.picture.thumbnail" alt="avatar" class="avatar" />
           </td>
         </ng-container>
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Name</th>
-          <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+          <td mat-cell *matCellDef="let user">{{ user.name.first }} {{ user.name.last }}</td>
         </ng-container>
         <ng-container matColumnDef="email">
           <th mat-header-cell *matHeaderCellDef>Email</th>
           <td mat-cell *matCellDef="let user">{{ user.email }}</td>
         </ng-container>
-        <ng-container matColumnDef="role">
-          <th mat-header-cell *matHeaderCellDef>Role</th>
-          <td mat-cell *matCellDef="let user">{{ user.role }}</td>
-        </ng-container>
-        <ng-container matColumnDef="status">
-          <th mat-header-cell *matHeaderCellDef>Status</th>
-          <td mat-cell *matCellDef="let user">
-            <span [ngClass]="user.status === 'Active' ? 'status-active' : 'status-inactive'">
-              {{ user.status }}
-            </span>
-          </td>
+        <ng-container matColumnDef="country">
+          <th mat-header-cell *matHeaderCellDef>Country</th>
+          <td mat-cell *matCellDef="let user">{{ user.location.country }}</td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="selectUser(row)"></tr>
       </table>
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+      <mat-paginator
+        [length]="totalResults"
+        [pageSize]="results"
+        [pageIndex]="page - 1"
+        [pageSizeOptions]="[5, 10, 20]"
+        (page)="onPageChange($event)"
+      >
+      </mat-paginator>
     </mat-card-content>
   </mat-card>
 
@@ -39,23 +49,18 @@
     <mat-card-title>User Details</mat-card-title>
     <mat-card-content>
       <div class="user-detail-header">
-        <img [src]="selectedUser.avatar" alt="avatar" class="avatar-large" />
+        <img [src]="selectedUser.picture.large" alt="avatar" class="avatar-large" />
         <div>
-          <h3>{{ selectedUser.name }}</h3>
+          <h3>{{ selectedUser.name.first }} {{ selectedUser.name.last }}</h3>
           <p>{{ selectedUser.email }}</p>
-          <span class="role">{{ selectedUser.role }}</span>
+          <span class="role">{{ selectedUser.nat }}</span>
         </div>
       </div>
       <div class="user-detail-info">
-        <p>
-          <strong>Status:</strong>
-          <span [ngClass]="selectedUser.status === 'Active' ? 'status-active' : 'status-inactive'">{{
-            selectedUser.status
-          }}</span>
-        </p>
-        <p><strong>Joined:</strong> {{ selectedUser.joined }}</p>
+        <p><strong>Country:</strong> {{ selectedUser.location.country }}</p>
+        <p><strong>City:</strong> {{ selectedUser.location.city }}</p>
         <p><strong>Phone:</strong> {{ selectedUser.phone }}</p>
-        <p><strong>Address:</strong> {{ selectedUser.address }}</p>
+        <p><strong>Username:</strong> {{ selectedUser.login.username }}</p>
       </div>
     </mat-card-content>
   </mat-card>
