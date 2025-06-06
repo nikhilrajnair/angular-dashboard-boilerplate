@@ -1,3 +1,23 @@
+mat-toolbar {
+  background: linear-gradient(90deg, #ede9fe 0%, #e0e7ff 100%);
+  color: #7c3aed;
+  box-shadow: 0 2px 8px 0 rgba(124, 58, 237, 0.06);
+}
+
 .spacer {
   flex: 1 1 auto;
+}
+
+mat-icon {
+  color: #7c3aed;
+}
+
+button[mat-icon-button] {
+  background: #f3e8ff;
+  border-radius: 50%;
+  margin-left: 8px;
+  transition: background 0.2s;
+  &:hover {
+    background: #ede9fe;
+  }
 }
