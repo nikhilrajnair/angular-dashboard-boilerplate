@@ -20,7 +20,7 @@ export class UserComponent implements OnInit, OnDestroy {
   loading = false;
   private userSub?: Subscription;
 
-  constructor(private userSerivce: UserService) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.fetchUsers();
@@ -33,7 +33,7 @@ export class UserComponent implements OnInit, OnDestroy {
   fetchUsers() {
     this.loading = true;
     this.userSub?.unsubscribe();
-    this.userSub = this.userSerivce.getUsers(this.page, this.results, this.search).subscribe((res) => {
+    this.userSub = this.userService.getUsers(this.page, this.results, this.search).subscribe((res) => {
       this.users = res.results;
       this.loading = false;
       this.selectedUser = this.users.length > 0 ? this.users[0] : null;
