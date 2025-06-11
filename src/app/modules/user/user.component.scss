@@ -1,49 +1,49 @@
 .user-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
   display: flex;
   gap: 32px;
-  padding: 32px;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
   min-height: 80vh;
+  padding: 32px;
 }
 
 .user-list-card {
-  flex: 2;
   background: linear-gradient(120deg, #fdf6e3 0%, #e0f7fa 100%);
   border-left: 6px solid #7c3aed;
-  box-shadow: 0 2px 12px 0 rgba(124, 58, 237, 0.08);
   border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgb(124 58 237 / 8%);
+  flex: 2;
 }
 
 .user-detail-card {
-  flex: 1;
   background: linear-gradient(120deg, #f0f9ff 0%, #f3e8ff 100%);
-  border-top: 4px solid #10b981;
-  box-shadow: 0 2px 12px 0 rgba(16, 185, 129, 0.08);
   border-radius: 12px;
-  min-width: 320px;
+  border-top: 4px solid #10b981;
+  box-shadow: 0 2px 12px 0 rgb(16 185 129 / 8%);
+  flex: 1;
   max-width: 350px;
+  min-width: 320px;
 }
 
 .avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
   border: 2px solid #e0e7ff;
+  border-radius: 50%;
+  height: 36px;
+  object-fit: cover;
+  width: 36px;
 }
 
 .avatar-large {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  object-fit: cover;
   border: 3px solid #7c3aed;
+  border-radius: 50%;
+  height: 72px;
   margin-right: 16px;
+  object-fit: cover;
+  width: 72px;
 }
 
 .user-detail-header {
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 16px;
   margin-bottom: 16px;
 }
@@ -54,11 +54,11 @@
 
 .role {
   background: #e0e7ff;
-  color: #7c3aed;
-  padding: 2px 8px;
   border-radius: 8px;
+  color: #7c3aed;
   font-size: 0.9em;
   margin-left: 8px;
+  padding: 2px 8px;
 }
 
 mat-card-title {
