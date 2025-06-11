@@ -1,17 +1,15 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
-  "plugins": [
-    "stylelint-order"
-  ],
+  "customSyntax": "postcss-scss",
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
   "rules": {
     "order/properties-alphabetical-order": true,
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        "ignorePseudoClasses": [
-          "host"
-        ]
+        "ignorePseudoClasses": ["host"]
       }
-    ]
+    ],
+    "no-empty-source": null
   }
 }
